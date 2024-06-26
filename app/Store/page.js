@@ -1,7 +1,10 @@
-import React from 'react'
+'use client'
 
-export default function page() {
-  return (
-    <div>page</div>
-  )
-}
+import { configureStore } from '@reduxjs/toolkit';
+import reducer from '../Slice/page';
+
+export const store = configureStore({
+  reducer: {
+    users: reducer
+  }
+});
